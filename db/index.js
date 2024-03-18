@@ -10,5 +10,15 @@ class DB {
       "select * from employee"
     );
   }
+  findAllRoles() {
+    return this.connection.promise().query(
+      "select * from role"
+    )
+  }
+  findAllDepartments() {
+    return this.connection.promise().query(
+      "select * from department"
+    )
+  }
 }
 module.exports = new DB(connection);
